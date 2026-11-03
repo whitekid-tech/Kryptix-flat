@@ -30,21 +30,21 @@ settings.channelLink = settings.channelLink || process.env.CHANNEL_LINK || '';
 settings.channelJid = settings.channelJid || process.env.CHANNEL_JID || '';
 
 // ── Menu builder (inlined so no extra file is needed) ──
-const MENU_SECTIONS = [["💌", "QUOTES", ["heartbreak", "friendship", "love", "newyear", "boyfriendsday", "christmas", "mothersday"]], ["🧩", "GENERAL", ["alive", "ping", "menu", "owner", "repo", "datetime", "location", "bot_info", "bot_stats", "uptime", "report", "countries", "calc", "google", "fetch", "help", "dev", "developer", "calculate", "readmore"]], ["🤖", "AI CORE", ["ai", "gpt4", "gemini", "llama", "deepseek", "mathgpt", "aicode", "textdetect", "imagine", "aiimg", "gptimage", "vision", "stablesd", "sologo", "nanobanana", "veo", "suno", "txt2vid", "txt2img", "flux", "dalle", "txt2video", "analyze", "describe", "yttranscribe"]], ["📥", "DOWNLOADS", ["song", "play", "video", "ytmp4", "tiktok", "fb", "ig", "twitter", "threads", "igstory", "spotify", "gdrive", "mediafire", "apk", "gitclone", "snack", "lyrics", "ytt", "website", "aio", "ytmp3", "yta", "lyric", "lirik", "alldown", "facebook", "ttdl", "insta", "x", "twdl", "mfdl", "gitdl", "googledrive", "snackdl", "downloadmovie", "sm", "silent"]], ["🔎", "SEARCH", ["weather", "wiki", "github", "npm", "whois", "winfo", "bible", "quran", "movie", "dlmovie", "smsubs", "news", "crypto", "shazam", "imdb", "wallpaper", "npmstalk", "tgstalk", "ytstalk", "ttstalk", "stalk", "getpp", "pp", "profilepic", "search", "get", "wikipedia", "npmsearch", "tiktokstalk", "whatmusic", "livefunfact"]], ["🎭", "FUN", ["joke", "darkjoke", "riddle", "dare", "truth", "roast", "quote", "fact", "advice", "pickup", "lovequote", "waifu", "meme", "rizz", "pickupline", "gaming", "character", "emojimix"]], ["🖼", "IMAGES", ["cat", "dog", "eightball", "technews", "funfact", "tictactoe", "game", "spongebob", "memetext", "textgif", "textmp4", "fancy", "nasa", "gimage", "googleimage", "wp", "4kwallpaper", "4kwp", "pinterest", "pin"]], ["🐉", "ANIME", ["animesearch", "topanime", "currentanime", "animechar", "samehadaku", "anime"]], ["🛠", "TOOLS", ["sticker", "s", "remini", "removebg", "wasted", "jail", "wanted", "gun", "brat", "neon", "qr", "ssweb", "vv", "viewonce", "rvo", "catbox", "url", "shorturl", "tinyurl", "tourl", "translate", "tr", "tts", "bomb", "togif", "ocr", "trackip", "ipinfo", "vcc", "ccgen", "obfuscate", "obf", "blurface", "imagescanner", "webcopier", "webtozip", "webp2mp4", "webptomp4", "telegraph", "tph", "uploadugu", "uguu", "toimg", "stickertoimg", "sticker2img", "font", "base64", "units", "dp", "schedule", "schedulelist", "schedulecancel"]], ["🛡", "GROUP ADMIN", ["add", "kick", "promote", "demote", "open", "close", "tagall", "link", "admins", "vcf", "gcstatus", "antilink", "welcome", "kickall", "warn", "bc", "join", "goodbye", "tagactive", "setgpp", "setgname", "autostatus", "autoadd", "mute", "unmute", "removeall", "grouplink", "invite", "setgroupname", "broadcast", "bye", "hidetag", "accept", "groupinfo", "groupstatus", "antistatus", "kickoffline"]], ["👑", "OWNER", ["ban", "unban", "bannedlist", "bio", "autoread", "antidelete", "setpp", "savestatus", "antidel", "setbio", "ram", "system", "cpu", "private", "public", "anticall", "autoreacts", "setname", "hack"]], ["⚽", "SPORTS", ["soccer", "nba", "nfl", "livescores", "standings", "teamsearch", "playersearch", "surebet", "topscorers", "upcomingmatches", "soccerscores", "live", "score", "bettips", "upcoming"]], ["📧", "TEMP MAIL", ["tempmail", "tempinbox", "readmail", "delmail", "tempmailgen"]], ["🎨", "LOGO MAKER", ["logolist", "logo", "logos"]]];
-const MENU_TOTAL = 295;
+// ── Original KRYPTIX menu style (╭━━━〔 〕━━━┈⊷), inlined so no extra file is needed ──
+const MENU_SECTIONS = [["NEXUS",["prime_store"]],["QUOTES",["heartbreak","friendship","love","newyear","boyfriendsday","christmas","mothersday"]],["GENERAL",["alive","ping","menu","owner","devdetails","repo","datetime","location","bot_info","bot_stats","uptime","pair","settings","prefix","report","active","countries","calc","google","fetch","help","dev","developer","setprefix","calculate","readmore","deleteme","autoview","voicestatus"]],["AI // CORE",["ai","aion","aioff","aitoggle","gpt4","gemini","llama","deepseek","mathgpt","aicode","textdetect","imagine","aiimg","gptimage","vision","stablesd","sologo","nanobanana","veo","suno","txt2vid","txt2img","voice","voiceon","voiceoff","flux","dalle","txt2video","analyze","describe","yttranscribe"]],["DOWNLOADS",["song","play","video","ytmp4","tiktok","fb","ig","twitter","threads","igstory","spotify","gdrive","mediafire","apk","gitclone","snack","lyrics","ytt","website","aio","ytmp3","yta","lyric","lirik","alldown","facebook","ttdl","insta","x","twdl","mfdl","gitdl","googledrive","snackdl","downloadmovie","sm","silent"]],["SEARCH",["weather","wiki","github","npm","whois","winfo","bible","quran","movie","dlmovie","smsubs","news","crypto","shazam","imdb","wallpaper","npmstalk","tgstalk","ytstalk","ttstalk","stalk","getpp","pp","profilepic","search","get","wikipedia","npmsearch","tiktokstalk","whatmusic","livefunfact"]],["FUN",["joke","darkjoke","riddle","dare","truth","roast","quote","fact","advice","pickup","lovequote","waifu","meme","rizz","pickupline","gaming","character","emojimix"]],["IMAGES",["cat","dog","eightball","technews","funfact","tictactoe","game","spongebob","memetext","textgif","textmp4","fancy","nasa","gimage","googleimage","wp","4kwallpaper","4kwp","pinterest","pin"]],["ANIME",["animesearch","topanime","currentanime","animechar","samehadaku","anime"]],["TOOLS",["sticker","s","remini","removebg","wasted","jail","wanted","gun","brat","neon","qr","ssweb","vv","viewonce","rvo","catbox","url","shorturl","tinyurl","tourl","translate","tr","tts","bomb","togif","ocr","trackip","ipinfo","vcc","ccgen","obfuscate","obf","blurface","imagescanner","webcopier","webtozip","webp2mp4","webptomp4","telegraph","tph","uploadugu","uguu","toimg","stickertoimg","sticker2img","font","base64","units","dp"]],["GROUP ADMIN",["add","kick","promote","demote","open","close","tagall","link","admins","vcf","gcstatus","antilink","welcome","kickall","warn","bc","join","goodbye","tagactive","setgpp","setgname","autostatus","autoadd","mute","unmute","removeall","grouplink","invite","setgroupname","broadcast","spam","greet","desc","admin","bye","hidetag","accept","groupinfo","groupstatus","antistatus","kickoffline"]],["OWNER",["mode","ban","unban","bannedlist","bio","autoread","autorecord","antidelete","setpp","whitekid","savestatus","antidel","setbio","ram","system","cpu","store","private","public","anticall","autoreacts","setname","hack"]],["SPORTS",["soccer","nba","nfl","livescores","standings","teamsearch","playersearch","surebet","topscorers","upcomingmatches","soccerscores","live","score","bettips","upcoming"]],["TEMP MAIL",["tempmail","tempinbox","readmail","delmail","tempmailgen"]],["LOGO MAKER",["logolist","logo","logos"]]];
+const MENU_TOTAL = 316;
 const menuBold = (text) => {
     const up = '𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭';
     const lo = '𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇';
     const di = '𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵';
+    const U = [...up], L = [...lo], D = [...di];
     return [...String(text)].map(c => {
-        if (c >= 'A' && c <= 'Z') return [...up][c.charCodeAt(0) - 65];
-        if (c >= 'a' && c <= 'z') return [...lo][c.charCodeAt(0) - 97];
-        if (c >= '0' && c <= '9') return [...di][c.charCodeAt(0) - 48];
+        if (c >= 'A' && c <= 'Z') return U[c.charCodeAt(0) - 65];
+        if (c >= 'a' && c <= 'z') return L[c.charCodeAt(0) - 97];
+        if (c >= '0' && c <= '9') return D[c.charCodeAt(0) - 48];
         return c;
     }).join('');
 };
-
-const onOff = (v) => (v ? '🟢' : '🔴');
 
 function uptime() {
     const s = Math.floor(process.uptime());
@@ -52,49 +52,31 @@ function uptime() {
     return `${d ? d + 'd ' : ''}${h}h ${m}m`;
 }
 
-// short header (sent as the banner caption)
-function buildMenu({ userName, isPublic, aiEnabled, autoReact, antiDelete, autoStatus }) {
-    const head =
-`╔═══════════════════╗
-   ⚡ ${menuBold(settings.botName)} ⚡
-   ${menuBold('by ' + settings.company)}
-╚═══════════════════╝
+// header (sent as the banner caption)
+function buildMenu({ userName, isPublic }) {
+    return `╭━━━〔 ${menuBold(settings.botName)} 〕━━━┈⊷
+┃ ⋄ ${menuBold('User:')} ${userName}
+┃ ⋄ ${menuBold('Owner:')} ${settings.ownerName}
+┃ ⋄ ${menuBold('Mode:')} ${isPublic ? 'Public' : 'Private'}
+┃ ⋄ ${menuBold('Uptime:')} ${uptime()}
+┃ ⋄ ${menuBold('Prefix:')} [ . ]
+┃ ⋄ ${menuBold('Commands:')} ${MENU_TOTAL}
+╰━━━━━━━━━━━━━━━━━━┈⊷
 
-👤 ${menuBold('User')}    ›  ${userName}
-👑 ${menuBold('Owner')}   ›  ${settings.ownerName}
-🛰 ${menuBold('Mode')}    ›  ${isPublic ? 'Public 🌍' : 'Private 🔐'}
-⏱ ${menuBold('Uptime')}  ›  ${uptime()}
-🔰 ${menuBold('Prefix')}  ›  [ . ]
-📚 ${menuBold('Commands')} ›  ${MENU_TOTAL}
-
-┏━━ 📡 ${menuBold('Live Status')}
-┃ ${onOff(aiEnabled)} AI   ${onOff(autoReact)} Auto-React
-┃ ${onOff(antiDelete)} Anti-Delete   ${onOff(autoStatus)} Auto-Status
-┗━━━━━━━━━━━━━━━━━━
-
-⚡ _${settings.botName} • ${settings.company}_`;
-    return head;
+> ${menuBold('Powered by ' + settings.company)}`;
 }
 
 // full command list, split into WhatsApp-friendly messages
 function buildMenuParts() {
-    const blocks = MENU_SECTIONS.map(([icon, title, cmds]) => {
-        const lines = []; let cur = '';
-        for (const c of cmds) {
-            const item = '.' + c;
-            if ((cur + ' • ' + item).length > 34 && cur) { lines.push(cur); cur = item; }
-            else cur = cur ? cur + ' • ' + item : item;
-        }
-        if (cur) lines.push(cur);
-        return `┏━━ ${icon} ${menuBold(title)} (${cmds.length})\n` + lines.map(l => '┃ ' + l).join('\n') + '\n┗━━━━━━━━━━━━━━━━━━';
-    });
+    const blocks = MENU_SECTIONS.map(([title, cmds]) =>
+        `╭━━━〔 ${menuBold(title)} 〕━━━┈⊷\n` + cmds.map(c => `┃ ⋄ .${c}`).join('\n') + '\n╰━━━━━━━━━━━━━━━━━━┈⊷');
     const parts = []; let buf = '';
     for (const b of blocks) {
         if (buf && (buf.length + b.length) > 3300) { parts.push(buf); buf = ''; }
         buf += (buf ? '\n\n' : '') + b;
     }
     if (buf) parts.push(buf);
-    parts[parts.length - 1] += `\n\n⚡ _${settings.botName} • ${settings.company}_`;
+    parts[parts.length - 1] += `\n\n> ${menuBold(settings.botName + ' • ' + settings.company)}`;
     return parts;
 }
 
@@ -220,6 +202,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+// lightweight endpoints for uptime monitors / self-ping (never sleep)
+app.get(['/health', '/ping'], (req, res) => res.status(200).json({ ok: true, uptime: Math.floor(process.uptime()), sessions: Object.values(sessions).filter(s => s.isConnected).length }));
 
 const AUTH_DIR = './auth_info';
 const DATA_FILE = './data/bot_data.json';
@@ -236,6 +220,17 @@ function saveBotData() {
 }
 
 const sessions = {}; 
+
+// group metadata cache (60s) so every group message doesn't cost a network round-trip
+const __groupMetaCache = new Map();
+async function getGroupMeta(sock, jid) {
+    const hit = __groupMetaCache.get(jid);
+    if (hit && Date.now() - hit.t < 60000) return hit.v;
+    const v = await sock.groupMetadata(jid);
+    __groupMetaCache.set(jid, { v, t: Date.now() });
+    if (__groupMetaCache.size > 500) __groupMetaCache.delete(__groupMetaCache.keys().next().value);
+    return v;
+}
 const userSockets = {}; 
 const messageLogs = {}; 
 
@@ -326,21 +321,12 @@ class BotSession {
 
     startActiveCheck() {
         if (this.activeInterval) clearInterval(this.activeInterval);
+        // tiny presence ping every 25s keeps the WhatsApp socket warm (no chat spam)
         this.activeInterval = setInterval(async () => {
             if (this.isConnected && this.sock?.user) {
-                try {
-                    const botNumber = jidNormalizedUser(this.sock.user.id);
-                    // Send keep-alive message once per hour (60 minutes) to own DM only
-                    // This message is only sent to the bot's own number as requested
-                    await this.sock.sendMessage(botNumber, { 
-                        text: `⚡ ${toBold(settings.botName)} is online 🚀\n\n_24/7 • ${settings.company}_` 
-                    });
-                    this.sendLog("24/7 Keep-alive message sent to own DM. ✅", "success");
-                } catch (e) {
-                    this.sendLog("Keep-alive failed: " + e.message, "error");
-                }
+                try { await this.sock.sendPresenceUpdate('available'); } catch (e) { this.sendLog("Keep-alive failed: " + e.message, "error"); }
             }
-        }, 60 * 60 * 1000); // Once per hour
+        }, 25 * 1000);
     }
 
     async initialize(pairingNumber = null) {
@@ -350,11 +336,16 @@ class BotSession {
         }
         this.isInitializing = true;
         try {
-            const { version } = await fetchLatestBaileysVersion();
+            let version = global.__WA_VERSION;
+            if (!version) {
+                try { version = (await Promise.race([fetchLatestBaileysVersion(), new Promise((_, r) => setTimeout(() => r(new Error('version timeout')), 4000))])).version; global.__WA_VERSION = version; } catch (e) { version = undefined; }
+            }
+            // drop the dead socket + its listeners so reconnects never stack handlers or leak memory
+            if (this.sock) { try { this.sock.ev.removeAllListeners(); this.sock.end(undefined); } catch (e) {} this.sock = null; }
             const { state, saveCreds } = await useMultiFileAuthState(this.authPath);
             
             this.sock = makeWASocket({
-                version,
+                ...(version ? { version } : {}),
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, P({ level: 'fatal' })),
@@ -365,14 +356,13 @@ class BotSession {
                 syncFullHistory: false,
                 shouldSyncHistoryMessage: () => false,
                 markOnlineOnConnect: true,
-                keepAliveIntervalMs: 30000,
+                keepAliveIntervalMs: 15000,
                 connectTimeoutMs: 60000,
                 defaultQueryTimeoutMs: 60000,
-                emitOwnEvents: true, // Needed for some state sync
-                retryRequestDelayMs: 5000,
+                retryRequestDelayMs: 250,
                 maxMsgRetryCount: 5,
                 linkPreviewImageThumbnailWidth: 192,
-                transactionOpts: { maxCommitRetries: 10, delayBetweenTriesMs: 3000 },
+                transactionOpts: { maxCommitRetries: 10, delayBetweenTriesMs: 500 },
                 getMessage: async (key) => {
                     if (messageLogs[key.id]) {
                         return { conversation: messageLogs[key.id].text };
@@ -401,7 +391,9 @@ class BotSession {
                     return message;
                 },
 
-                generateHighQualityLinkPreview: true,
+                generateHighQualityLinkPreview: false,
+                fireInitQueries: true,
+                emitOwnEvents: true,
             });
 
             if (pairingNumber && !state.creds.registered) {
@@ -469,8 +461,8 @@ class BotSession {
 
                         // Handle Autoread, Autotyping, Autorecording
                         if (!isMe && !isStatus) {
-                            await handleAutoread(this.sock, msg);
-                            await storeMessage(msg);
+                            handleAutoread(this.sock, msg).catch(() => {});
+                            storeMessage(msg).catch(() => {});
                         }
 
                         if (msg.message?.protocolMessage?.type === 0) {
@@ -488,15 +480,18 @@ class BotSession {
                         if (!isStatus) {
                             let logEntry = { text, type };
                             if (['imageMessage', 'videoMessage', 'audioMessage'].includes(type)) {
-                                try {
-                                    const mContent = messageContent[type];
-                                    if (mContent && (mContent.directPath || mContent.url)) {
-                                        const stream = await downloadContentFromMessage(mContent, type.replace('Message', ''));
-                                        let buffer = Buffer.from([]);
-                                        for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
-                                        logEntry.buffer = buffer;
-                                    }
-                                } catch (e) {}
+                                // download in the background so commands are never delayed by media
+                                (async () => {
+                                    try {
+                                        const mContent = messageContent[type];
+                                        if (mContent && (mContent.directPath || mContent.url) && Number(mContent.fileLength || 0) < 15 * 1024 * 1024) {
+                                            const stream = await downloadContentFromMessage(mContent, type.replace('Message', ''));
+                                            const chunks = [];
+                                            for await (const chunk of stream) chunks.push(chunk);
+                                            logEntry.buffer = Buffer.concat(chunks);
+                                        }
+                                    } catch (e) {}
+                                })();
                             }
                             logEntry.pushName = msg.pushName || 'User';
                             messageLogs[msgId] = logEntry;
@@ -532,7 +527,7 @@ class BotSession {
                         let isAdmin = isOwner;
                         if (!isAdmin && isGroup) {
                             try {
-                                const groupMetadata = await this.sock.groupMetadata(from);
+                                const groupMetadata = await getGroupMeta(this.sock, from);
                                 const participant = groupMetadata.participants.find(p => p.id === sender);
                                 isAdmin = participant && (participant.admin === 'admin' || participant.admin === 'superadmin');
                             } catch (e) {
@@ -580,17 +575,9 @@ class BotSession {
                                 try {
                                     switch (commandName) {
                                         case 'menu':
-                                            const loadEmojis = ['⏳', '⌛', '🚀', '✨'];
-                                            for (const emoji of loadEmojis) await this.sock.sendMessage(from, { react: { text: emoji, key: msg.key } });
+                                            this.sock.sendMessage(from, { react: { text: '⚡', key: msg.key } }).catch(() => {});
                                             const customName = botData.userNames[this.userId] || msg.pushName || 'User';
-                                            const menuText = buildMenu({
-                                                userName: customName,
-                                                isPublic: this.isPublic,
-                                                aiEnabled: this.aiEnabled,
-                                                autoReact: this.autoReact,
-                                                antiDelete: botData.antiDelete[this.userId],
-                                                autoStatus: botData.statusSettings[this.userId] && botData.statusSettings[this.userId].autoStatus
-                                            });
+                                            const menuText = buildMenu({ userName: customName, isPublic: this.isPublic });
                                             try {
                                                 const bannerBuf = global.__KRYPTIX_BANNER ? Buffer.from(global.__KRYPTIX_BANNER, 'base64') : fs.readFileSync(path.join(__dirname, 'assets', 'kryptix-banner.png'));
                                                 await this.sock.sendMessage(from, { image: bannerBuf, caption: menuText });
@@ -677,6 +664,8 @@ class BotSession {
                     this.sendLog(`Connection closed. Reconnecting: ${shouldReconnect}`, 'warning');
                     this.sendConnectionStatus();
                     const statusCode = (lastDisconnect.error)?.output?.statusCode;
+                    this.reconnectTries = (this.reconnectTries || 0) + 1;
+                    const backoff = Math.min(1000 * Math.pow(1.6, this.reconnectTries - 1), 15000);
                     
                     if (statusCode === DisconnectReason.loggedOut || statusCode === 401) {
                         this.sendLog('Session expired or logged out. Clearing auth data to allow fresh pairing...', 'error');
@@ -693,18 +682,20 @@ class BotSession {
                         delete sessions[this.userId];
                         this.sendConnectionStatus();
                     } else if (statusCode === DisconnectReason.restartRequired || statusCode === DisconnectReason.connectionLost || statusCode === 428) {
-                        this.sendLog(`Connection issue (${statusCode}). Restarting in 3s...`, 'warning');
-                        setTimeout(() => this.initialize(), 3000);
+                        this.sendLog(`Connection issue (${statusCode}). Restarting now...`, 'warning');
+                        setTimeout(() => this.initialize(), 500);
                     } else if (statusCode === 515) {
                         this.sendLog('Stream error. Reconnecting immediately...', 'warning');
                         this.initialize();
                     } else {
-                        this.sendLog(`Connection closed (${statusCode}). Reconnecting in 5s...`, 'info');
-                        setTimeout(() => this.initialize(), 5000);
+                        this.sendLog(`Connection closed (${statusCode}). Reconnecting in ${Math.round(backoff / 1000)}s...`, 'info');
+                        setTimeout(() => this.initialize(), backoff);
                     }
                 } else if (connection === 'open') {
                     this.isConnected = true;
                     this.isInitializing = false;
+                    this.reconnectTries = 0;
+                    this.lastOpenAt = Date.now();
                     this.sendLog('Connected successfully! ✅', 'success');
                     this.sendConnectionStatus();
                     this.startActiveCheck();
@@ -744,8 +735,8 @@ class BotSession {
 
         } catch (err) {
             this.isInitializing = false;
-            this.sendLog(`Initialization failed: ${err.message}. Retrying in 10s...`, 'error');
-            setTimeout(() => this.initialize(), 10000);
+            this.sendLog(`Initialization failed: ${err.message}. Retrying in 3s...`, 'error');
+            setTimeout(() => this.initialize(), 3000);
         }
     }
 }
@@ -805,19 +796,34 @@ server.listen(PORT, () => {
     // Auto-load sessions
     loadExistingSessions();
     
-    // Anti-Sleep Mechanism
-    const APP_URL = process.env.APP_URL || `http://localhost:${PORT}`;
-    if (APP_URL) {
-        setInterval(async () => {
-            try {
-                await axios.get(APP_URL);
-                console.log("Anti-Sleep Ping: Server is active. ⚡");
-            } catch (e) {
-                console.log("Anti-Sleep Ping: " + e.message);
-            }
-        }, 5 * 60 * 1000); // Ping every 5 minutes
-    }
+    // ── Anti-Sleep: ping our own PUBLIC url so free hosts never idle the app ──
+    const host = process.env.APP_URL
+        || process.env.RENDER_EXTERNAL_URL
+        || (process.env.RAILWAY_PUBLIC_DOMAIN && 'https://' + process.env.RAILWAY_PUBLIC_DOMAIN)
+        || (process.env.KOYEB_PUBLIC_DOMAIN && 'https://' + process.env.KOYEB_PUBLIC_DOMAIN)
+        || (process.env.HEROKU_APP_NAME && `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
+        || (process.env.FLY_APP_NAME && `https://${process.env.FLY_APP_NAME}.fly.dev`)
+        || (process.env.PROJECT_DOMAIN && `https://${process.env.PROJECT_DOMAIN}.glitch.me`);
+    const pingUrl = (host || `http://localhost:${PORT}`).replace(/\/$/, '') + '/health';
+    if (!host) console.warn('[Anti-Sleep] No public URL env found (APP_URL / RENDER_EXTERNAL_URL ...). Set APP_URL to your host URL so external pings keep the bot awake.');
+    setInterval(() => { axios.get(pingUrl, { timeout: 15000 }).catch(() => {}); }, 4 * 60 * 1000);
+
+    // ── Watchdog: any saved session that is offline for >60s gets re-initialised ──
+    setInterval(() => {
+        for (const id in sessions) {
+            const se = sessions[id];
+            if (!se || se.isConnected || se.isInitializing) continue;
+            if (!fs.existsSync(path.join(se.authPath, 'creds.json'))) continue;
+            if (Date.now() - (se.lastOpenAt || 0) < 60000) continue;
+            console.log(`[Watchdog] ${id} offline - restarting session`);
+            se.initialize().catch(() => {});
+        }
+    }, 60 * 1000);
 });
+
+// never let one bad promise/exception kill the process
+process.on('uncaughtException', (e) => console.error('[uncaughtException]', e && e.message));
+process.on('unhandledRejection', (e) => console.error('[unhandledRejection]', e && e.message || e));
 
 };
 __defs["settings.js"] = function (module, exports, require, __filename, __dirname) {
